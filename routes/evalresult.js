@@ -11,7 +11,7 @@ router.post('/123', function(req, res, next){
 	console.log('Request is : '+req.body);
 	var reqbody = req.body.title;
 	console.log('Request is **: '+reqbody.body);
-    reqbody = reqbody.replace('OR','||');
+   // reqbody = reqbody.replace('OR','||');
 	console.log('**Request is **: '+reqbody.body);
 	var testvar = eval(reqbody);
 
