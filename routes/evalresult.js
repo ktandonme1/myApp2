@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
 router.post('/123', function(req, res, next){
 	console.log(req.body);
 	var reqbody = req.body.title;
+    reqbody = reqbody.replace('&#124;','||');
 	var testvar = eval(reqbody);
 
 	console.log('**jsonarraylength**'+testvar.length);
