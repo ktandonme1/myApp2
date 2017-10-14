@@ -8,9 +8,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/123', function(req, res, next){
-	console.log(req.body);
+	console.log('Request is : '+req.body);
 	var reqbody = req.body.title;
-    reqbody = reqbody.replace('&#124;','||');
+	console.log('Request is **: '+reqbody.body);
+    reqbody = reqbody.replace('OR','||');
+	console.log('**Request is **: '+reqbody.body);
 	var testvar = eval(reqbody);
 
 	console.log('**jsonarraylength**'+testvar.length);
