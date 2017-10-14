@@ -9,10 +9,20 @@ router.get('/', function(req, res, next) {
 
 router.post('/123', function(req, res, next){
 	console.log(req.body);
-	var evalstring = req.body.title;
-	console.log('**evalstring**'+evalstring);
-	console.log('**evalresult**'+eval(evalstring));
+	var reqbody = req.body.title;
+	var testvar = eval(reqbody);
 
-	res.status(200).send(req.body);
+	console.log('**jsonarraylength**'+testvar.length);
+
+	for(var i in testvar){
+
+		var evalstring = testvar[i].validationEvalString;
+		var evalstringres = eval(evalstring);
+		console.log('**Loop value is**'+evalstring);
+		console.log('**Loop value res is**'+evalstringres);
+		testvar[i].validationEvalResult=evalstringres;
+	}
+	
+	res.status(200).send(testvar);
 });
 module.exports = router;
