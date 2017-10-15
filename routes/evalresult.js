@@ -12,7 +12,7 @@ router.post('/123', function(req, res, next){
 	console.log(req.body);
 	console.log('*req.body.title*');
 	console.log(req.body.title);
-	var reqbody = (req.body.title).toString();
+	var reqbody = (req.body).toString();
 	reqbody = reqbody.replace(/OR/g,'||').replace(/AND/g,'&&');
 	var testvar = eval(reqbody);
 
