@@ -28,7 +28,6 @@ router.post('/123', function(req, res, next){
 	var testvar = eval(reqbody);
 	console.log('---------testvar------------');
 	console.log(testvar);
-/*
 
 	console.log('**jsonarraylength**'+testvar.length);
 
@@ -41,8 +40,7 @@ router.post('/123', function(req, res, next){
 		testvar[i].validationEvalResult=evalstringres;
 	}
 	res.status(200).send(testvar);
-*/
 
-	res.status(200).send('test resp');	
+//	res.status(200).send('test resp');	
 });
 module.exports = router;
