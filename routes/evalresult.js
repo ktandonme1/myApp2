@@ -20,8 +20,9 @@ router.post('/123', function(req, res, next){
 	console.log(req.body.title);
 	console.log('---------------------');
 
-	var reqbody = (req.body.title);
+	var reqbody = JSON.stringify(req.body.title);
 	reqbody = reqbody.replace(/OR/g,'||').replace(/AND/g,'&&');
+	console.log(reqbody);
 /*
 	var testvar = eval(reqbody);
 
