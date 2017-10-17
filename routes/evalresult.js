@@ -19,9 +19,10 @@ router.post('/123', function(req, res, next){
 	console.log('*req.body.title*');
 	console.log(req.body.title);
 	console.log('---------------------');
-/*	
+
 	var reqbody = (req.body.title);
 	reqbody = reqbody.replace(/OR/g,'||').replace(/AND/g,'&&');
+/*
 	var testvar = eval(reqbody);
 
 	console.log('**jsonarraylength**'+testvar.length);
