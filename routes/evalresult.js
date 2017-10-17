@@ -27,6 +27,7 @@ router.post('/123', function(req, res, next){
 
 	var testvar = eval(reqbody);
 	console.log('---------testvar------------');
+	console.log(testvar);
 /*
 
 	console.log('**jsonarraylength**'+testvar.length);
