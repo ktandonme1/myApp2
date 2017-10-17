@@ -8,11 +8,19 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/123', function(req, res, next){
-	console.log('*req.body*');
+
+	//var testvar=JSON.parse(req.body.toString);
+	
+
+	console.log('*req.body*'+JSON.stringify(req.body,null,2));
+	console.log('---------reqbody------------');
 	console.log(req.body);
+	console.log('---------reqbodytitle------------');
 	console.log('*req.body.title*');
 	console.log(req.body.title);
-	var reqbody = (req.body.title).toString();
+	console.log('---------------------');
+/*	
+	var reqbody = (req.body.title);
 	reqbody = reqbody.replace(/OR/g,'||').replace(/AND/g,'&&');
 	var testvar = eval(reqbody);
 
@@ -26,7 +34,9 @@ router.post('/123', function(req, res, next){
 		console.log('**Loop value res is**'+evalstringres);
 		testvar[i].validationEvalResult=evalstringres;
 	}
-	
 	res.status(200).send(testvar);
+*/
+
+	res.status(200).send('test resp');	
 });
 module.exports = router;
