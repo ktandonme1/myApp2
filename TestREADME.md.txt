@@ -1,2 +1,2 @@
-Hi there - this is part of branch
+Hi there - this is master branch
 This is July updated
